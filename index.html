@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Maison Aurea — a curated boutique for fashion, handbags, jewelry, shoes and beauty.">
+  <meta name="theme-color" content="#11110f">
+  <title>Maison Aurea | Timeless Style. Golden Details.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">A CURATED TOUCH OF EVERYDAY LUXURY · DELIVERY ACROSS BULGARIA</div>
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="Maison Aurea home">
+      <span class="wordmark-name">MAISON AUREA</span>
+      <span class="wordmark-tagline">TIMELESS STYLE. GOLDEN DETAILS.</span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#shop">Shop</a>
+      <a href="#story">Our Edit</a>
+      <a href="#delivery">Delivery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-button" id="open-cart" aria-label="Open shopping basket">
+      BAG <span id="cart-count" class="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">THE MAISON AUREA EDIT</p>
+        <h1>Find your<br><em>golden</em> detail.</h1>
+        <p class="hero-description">Considered pieces. Effortless elegance. Discover fashion, accessories and little luxuries selected to make every day feel special.</p>
+        <a class="button button-gold" href="#shop">Explore the collection <span aria-hidden="true">↗</span></a>
+        <p class="hero-footnote">A growing independent boutique · Bulgaria</p>
+      </div>
+      <div class="hero-art" role="img" aria-label="Editorial luxury fashion still life">
+        <div class="hero-art-label">THE NEW<br>CLASSICS</div>
+        <div class="hero-art-caption">A little luxury, every day.</div>
+      </div>
+    </section>
+
+    <section class="category-strip" aria-label="Shop by category">
+      <button class="category-chip active" data-category="All">All pieces</button>
+      <button class="category-chip" data-category="Clothes">Clothes</button>
+      <button class="category-chip" data-category="Handbags">Handbags</button>
+      <button class="category-chip" data-category="Jewelry">Jewelry</button>
+      <button class="category-chip" data-category="Accessories">Accessories</button>
+      <button class="category-chip" data-category="Shoes">Shoes</button>
+      <button class="category-chip" data-category="Beauty">Beauty</button>
+    </section>
+
+    <section class="shop-section section-wrap" id="shop">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CURATED FOR YOU</p>
+          <h2>Shop the edit</h2>
+        </div>
+        <p class="section-intro">Discover your next favourite. New pieces will be added as our boutique grows.</p>
+      </div>
+      <div class="shop-tools">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Search the collection…" aria-label="Search products"></label>
+        <label class="sort-box"><span>Sort</span>
+          <select id="sort-select" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="low-high">Price: low to high</option>
+            <option value="high-low">Price: high to low</option>
+            <option value="name">Name A–Z</option>
+          </select>
+        </label>
+      </div>
+      <p id="results-count" class="results-count" aria-live="polite"></p>
+      <div id="product-grid" class="product-grid"></div>
+      <div id="empty-results" class="empty-state hidden">No pieces found. Try another search or category.</div>
+    </section>
+
+    <section class="brand-note" id="story">
+      <div class="brand-note-mark">MA</div>
+      <div>
+        <p class="eyebrow">THE MAISON AUREA PHILOSOPHY</p>
+        <h2>Less, but lovelier.</h2>
+        <p>We believe in the finishing touches: a bag that goes everywhere, jewelry that feels like you, and small discoveries that make getting dressed a pleasure. Our edit brings together boutique finds and carefully selected supplier pieces.</p>
+      </div>
+    </section>
+
+    <section class="service-row section-wrap" id="delivery">
+      <article><span class="service-icon">✦</span><h3>Curated finds</h3><p>A considered selection across fashion, accessories and beauty.</p></article>
+      <article><span class="service-icon">↗</span><h3>Bulgaria-wide delivery</h3><p>Delivery details and costs are confirmed with you before the order is finalised.</p></article>
+      <article><span class="service-icon">♡</span><h3>Personal service</h3><p>Questions about sizing, availability or an item? Contact us before ordering.</p></article>
+    </section>
+
+    <section class="contact-banner" id="contact">
+      <p class="eyebrow">A QUESTION ABOUT A PIECE?</p>
+      <h2>We're happy to help.</h2>
+      <p>Ask about availability, sizing, delivery or your order.</p>
+      <a id="contact-whatsapp" class="button button-outline-light" href="#" target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
+      <p class="contact-small">Before publishing, add your WhatsApp number in <code>script.js</code>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="index.html">MAISON AUREA</a>
+    <p>Timeless style. Golden details.</p>
+    <div class="footer-links"><a href="#shop">Shop</a><a href="#delivery">Delivery & returns</a><a href="#contact">Contact</a></div>
+    <p class="copyright">© <span id="year"></span> Maison Aurea. All rights reserved.</p>
+    <p class="footer-disclaimer">Product images, prices and availability shown in this starter shop are examples. Replace them with accurate product information before accepting customer orders.</p>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping basket" aria-hidden="true">
+    <div class="cart-header"><div><p class="eyebrow">YOUR SELECTION</p><h2>Your bag <span id="drawer-count">(0)</span></h2></div><button id="close-cart" class="icon-button" aria-label="Close basket">×</button></div>
+    <div id="cart-items" class="cart-items"></div>
+    <div id="cart-empty" class="cart-empty"><span>✧</span><p>Your bag is waiting for something lovely.</p><button class="text-button" id="continue-shopping">Continue shopping →</button></div>
+    <div class="cart-footer">
+      <div class="subtotal-row"><span>Subtotal</span><strong id="cart-subtotal">€0.00</strong></div>
+      <p class="cart-note">Delivery is not included. We'll confirm the delivery fee and availability with you.</p>
+      <button class="button button-gold button-full" id="checkout-button">Continue to order</button>
+      <button class="button button-light button-full" id="cart-whatsapp">Order via WhatsApp</button>
+    </div>
+  </aside>
+
+  <dialog id="checkout-dialog" class="checkout-dialog">
+    <form id="checkout-form">
+      <div class="dialog-heading"><div><p class="eyebrow">ONE LAST STEP</p><h2>Send your order request</h2></div><button type="button" id="close-checkout" class="icon-button" aria-label="Close order form">×</button></div>
+      <p class="form-intro">Complete your details. Your email app will open with your order request prepared, or you can send it to us through WhatsApp.</p>
+      <label>Full name <input name="name" autocomplete="name" required maxlength="100" placeholder="Your full name"></label>
+      <label>Phone number <input name="phone" type="tel" autocomplete="tel" required maxlength="40" placeholder="+359 …"></label>
+      <label>Email address <input name="email" type="email" autocomplete="email" maxlength="120" placeholder="you@example.com"></label>
+      <label>Delivery address in Bulgaria <textarea name="address" autocomplete="street-address" required rows="3" maxlength="500" placeholder="City, street, building / office or courier point"></textarea></label>
+      <label>Order notes <textarea name="notes" rows="2" maxlength="500" placeholder="Sizes, colours, supplier item questions…"></textarea></label>
+      <div class="checkout-total"><span>Items subtotal</span><strong id="checkout-subtotal">€0.00</strong></div>
+      <p class="form-legal">Submitting creates an order request, not a confirmed order or payment. Availability, final price, delivery fee and payment method must be confirmed with Maison Aurea.</p>
+      <button type="submit" class="button button-gold button-full">Prepare order email</button>
+      <button type="button" id="checkout-whatsapp" class="button button-light button-full">Send order via WhatsApp</button>
+      <p id="checkout-status" class="form-status" role="status"></p>
+    </form>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
